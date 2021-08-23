@@ -161,6 +161,9 @@
   <ItemGroup>
     <ClInclude Include="Ren_Win.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\gfx\mars.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

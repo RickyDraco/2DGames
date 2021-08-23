@@ -6,14 +6,15 @@
 
 int main(int argc, char* args[])
 {
-
-	if (SDL_Init(SDL_INIT_VIDEO) != 0)
-		std::cout << "SDL could not initilize. SDL error: " << SDL_GetError() << std::endl;
+	if (SDL_Init(SDL_INIT_VIDEO) > 0)
+		std::cout << "SDL could not initilize. SDL Error01: " << SDL_GetError() << std::endl;
 
 	if (!IMG_Init(IMG_INIT_PNG))
-		std::cout << "Image could not initilize. SDL error" << SDL_GetError() << std::endl;
+		std::cout << "Image could not initilize. SDL Error02: " << SDL_GetError() << std::endl;
 
-	render_window window("ricky", 1280, 720);
+	RenderWindow window("ricky", 1280, 720);
+
+	SDL_Texture* backgroundTexture = window.loadTexture("res/gfx/graveyard.png");
 
 	bool GameRunning = true;
 	SDL_Event event;
@@ -25,6 +26,9 @@ int main(int argc, char* args[])
 			if (event.type == SDL_QUIT)
 				GameRunning = false;
 		}
+		window.clear();
+		window.render(backgroundTexture);
+		window.display();
 	}
 
 	window.cleanUp();

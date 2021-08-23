@@ -2,12 +2,16 @@
 #include<SDL.h>
 #include<SDL_image.h>
 
-class render_window
+class RenderWindow
 {
-
 public:
-	render_window(const char* title, int width, int height);
+
+	RenderWindow(const char* title, int width, int height);
+	SDL_Texture* loadTexture(const char* filePath);
 	void cleanUp();
+	void clear();
+	void render(SDL_Texture* tex);
+	void display();
 
 private:
 	SDL_Window* window;
