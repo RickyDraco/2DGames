@@ -49,8 +49,8 @@ void RenderWindow::render(Entity& entity)
 	src.h = entity.getCurrentFrame().h;
 	
 	SDL_Rect dist;																					//distination- the size we want to display and its position
-	dist.x = entity.getX();
-	dist.y = entity.getY();
+	dist.x = entity.getPos().x;
+	dist.y = entity.getPos().y;
 	dist.w = entity.getCurrentFrame().w * 0.66667f;
 	dist.h = entity.getCurrentFrame().h * 0.66667f;
 	

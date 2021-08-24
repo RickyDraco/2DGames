@@ -1,9 +1,11 @@
 #include<iostream>
+#include<vector>
 #include<SDL.h>
 #include<SDL_image.h>
 
 #include"Ren_Win.h"
 #include"Entity.h"
+#include"physics.h"
 
 int main(int argc, char* args[])
 {
@@ -17,7 +19,11 @@ int main(int argc, char* args[])
 
 	SDL_Texture* backgroundTexture = window.loadTexture("res/gfx/graveyard.png");
 
-	Entity platform(0, 0, backgroundTexture);
+	std::vector<Entity> entities
+	{
+		Entity(vector2f(0, 0), backgroundTexture),
+		//Entity(200, 100, backgroundTexture)
+	};
 
 	bool GameRunning = true;
 	SDL_Event event;
@@ -30,7 +36,9 @@ int main(int argc, char* args[])
 				GameRunning = false;
 		}
 		window.clear();
-		window.render(platform);
+		for(Entity& e : entities)
+			window.render(e);
+
 		window.display();
 	}
 

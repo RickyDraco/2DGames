@@ -4,7 +4,7 @@
 
 #include"Entity.h"
 
-Entity::Entity(float px, float py, SDL_Texture* ptex): x(px), y(py), tex(ptex)
+Entity::Entity(vector2f ppos, SDL_Texture* ptex): pos(ppos), tex(ptex)
 {
 	currentFrame.x = 0;
 	currentFrame.y = 0;
@@ -12,14 +12,9 @@ Entity::Entity(float px, float py, SDL_Texture* ptex): x(px), y(py), tex(ptex)
 	currentFrame.h = 1080;
 }
 
-float Entity::getX()
+vector2f& Entity::getPos()
 {
-	return x;
-}
-
-float Entity::getY()
-{
-	return y;
+	return pos;
 }
 
 SDL_Texture* Entity::getTex()

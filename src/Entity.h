@@ -2,17 +2,19 @@
 #include<SDL.h>
 #include<SDL_image.h>
 
+#include"physics.h"
+
 class Entity
 {
 public:
-	Entity(float px, float py, SDL_Texture* ptex);
-	float getX();
-	float getY();
+	Entity(vector2f ppos, SDL_Texture* ptex);
+	vector2f& getPos();
 	SDL_Texture* getTex();
 	SDL_Rect getCurrentFrame();
 
 private:
-	float x, y;
+	vector2f pos;
 	SDL_Rect currentFrame;
 	SDL_Texture* tex;
+	
 };

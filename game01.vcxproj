@@ -155,11 +155,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\physics.cpp" />
     <ClCompile Include="src\Entity.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Ren_Win.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\physics.h" />
     <ClInclude Include="src\Entity.h" />
     <ClInclude Include="src\Ren_Win.h" />
   </ItemGroup>
