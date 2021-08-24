@@ -1,2 +1,6 @@
-﻿  main.cpp
+﻿  Ren_Win.cpp
+E:\ricky_game\game01\src\Ren_Win.cpp(52,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\ricky_game\game01\src\Ren_Win.cpp(53,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\ricky_game\game01\src\Ren_Win.cpp(54,38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\ricky_game\game01\src\Ren_Win.cpp(55,38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   game01.vcxproj -> E:\ricky_game\game01\Debug\game01.exe
